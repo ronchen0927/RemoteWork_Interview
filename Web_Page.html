@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <title>Document</title>
+</head>
+<body>  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>  
+    <!-- START card -->
+    <form class="" role="form">
+      <div class="row">
+        <div class="form-group form-group-default required">
+          <label>姓名</label>
+          <input type="text" class="form-control" required>
+        </div>
+      </div>
+      <div class="form-group form-group-default required">
+        <label>電話</label>
+        <input type="tel" class="form-control" required>
+      </div>
+      <div class="form-group  form-group-default required">
+        <label>聯絡地址</label>
+        <input type="text" class="form-control" required>
+      </div>
+      <button type="submit" onclick="sweetAlertTest()">送出</button>
+    </form>
+    <!-- END card -->
+    <!-- START table -->
+    <table id="table_id" class="display">
+      <thead>
+          <tr>
+              <th>日期</th>
+              <th>收盘</th>
+              <th>开盘</th>
+              <th>高</th>
+              <th>低</th>
+              <th>交易量</th>
+              <th>涨跌幅</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>2021年7月23日</td>
+            <td>148.56</td>
+            <td>147.55</td>
+            <td>148.72</td>
+            <td>146.92</td>
+            <td>71.45M</td>
+            <td>1.20%</td>      
+          </tr>
+          <tr>
+            <td>2021年7月22日</td>
+            <td>146.80</td>
+            <td>145.93</td>
+            <td>148.20</td>
+            <td>145.81</td>
+            <td>77.34M</td>
+            <td>0.96%</td>
+          </tr>
+          <tr>
+            <td>2021年7月21日</td>
+            <td>145.40</td>
+            <td>145.47</td>
+            <td>146.12</td>
+            <td>144.68</td>
+            <td>74.99M</td>
+            <td>-0.51%</td>
+          </tr>
+          <tr>
+            <td>2021年7月20日</td>
+            <td>146.15</td>
+            <td>143.52</td>
+            <td>147.07</td>
+            <td>143.00</td>
+            <td>96.35M</td>
+            <td>2.60%</td>
+          </tr>
+          <tr>
+            <td>2021年7月19日</td>
+            <td>142.45</td>
+            <td>143.75</td>
+            <td>144.07</td>
+            <td>141.67</td>
+            <td>121.44M</td>
+            <td>-2.69%</td>
+          </tr>
+          <tr>
+            <td>2021年7月16日</td>
+            <td>146.39</td>
+            <td>148.46</td>
+            <td>149.76</td>
+            <td>145.88</td>
+            <td>93.25M</td>
+            <td>-1.41%</td>
+          </tr>
+          <tr>
+            <td>2021年7月15日</td>
+            <td>148.48</td>
+            <td>149.25</td>
+            <td>149.98</td>
+            <td>147.10</td>
+            <td>106.82M</td>
+            <td>-0.45%</td>
+          </tr>
+          <tr>
+            <td>2021年7月14日</td>
+            <td>149.15</td>
+            <td>148.00</td>
+            <td>149.57</td>
+            <td>147.70</td>
+            <td>127.05M</td>
+            <td>2.41%</td>
+          </tr>
+          <tr>
+            <td>2021年7月13日</td>
+            <td>145.64</td>
+            <td>143.70</td>
+            <td>147.46</td>
+            <td>143.70</td>
+            <td>100.83M</td>
+            <td>0.79%</td>
+          </tr>
+          <tr>
+            <td>2021年7月12日</td>
+            <td>144.50</td>
+            <td>146.22</td>
+            <td>146.22</td>
+            <td>144.04</td>
+            <td>76.30M</td>
+            <td>-0.42%</td>
+          </tr>
+      </tbody>
+    </table>
+    <!-- END table -->
+    <script>
+      $(document).ready(function() {
+           $('#table_id').DataTable();
+      });
+      
+      function sweetAlertTest(){
+        Swal.fire(
+            '送出成功',
+            '送出成功',
+        );
+      }
+    </script>
+</body>
+</html>
